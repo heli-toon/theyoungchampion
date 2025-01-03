@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf");
+}
+:root {
+  scroll-behavior: smooth;
+}
+::selection {
+  background: var(--blue);
+  color: var(--yellow);
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --blue: #597aff;
+  --white: #fef9f3;
+  --black: #0a0a0a;
+  --gray: #363636;
+}
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: auto;
+  scrollbar-color: var(--blue) var(--black);
+}
+::-webkit-scrollbar {
+  width: 1.085vw;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 7px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--blue);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+  margin-block: 0.5em;
+}
+body {
+  animation: blur 0.75s ease-in-out;
+  overflow-x: hidden;
+  font-family: "Inter", "Satoshi", "Gotham Rounded", sans-serif, system-ui;
+  background: var(--black) !important;
+  color: var(--white) !important;
+}
+section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: inherit;
+  letter-spacing: -1px;
+  color: var(--blue) !important;
+}
+a {
+  color: var(--blue);
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+.section-title h2,
+h2.section-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.section-title h2:after,
+h2.section-title:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: var(--yellow);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+@keyframes blur {
+  0% {
+    filter: blur(18px);
+  }
+  100% {
+  }
+}
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+@keyframes scale {
+  from,
+  to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+section#hero {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+section#hero h1 {
+  color: var(--white) !important;
+  font-size: clamp(2em, 2vw, 4em);
+  padding: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
