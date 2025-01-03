@@ -139,6 +139,113 @@ section#hero h1 {
 
 
 /*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 35px auto;
+  list-style: none;
+  text-align: center;
+  background: var(--black2);
+  border-radius: 50px;
+  padding: 2px 15px;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 15px 8px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0;
+  transition: all 0.3s ease-in-out;
+}
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: var(--blue);
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: .5rem;
+}
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap img{
+  border-radius: .5rem;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 1;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  justify-content: center;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  border-radius: .5rem .5rem 0 0;
+  color: var(--white);
+  font-size: 28px;
+  text-align: center;
+  background: var(--blue);
+  transition: 0.3s;
+  width: 50%;
+}
+.portfolio .portfolio-wrap .portfolio-links a i{
+  color: var(--black);
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {filter: brightness(1.2);}
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: 0;
+  color: var(--black);
+}
+.gslide-media img{
+  border-radius: .5rem .5rem 0 0 !important;
+}
+.gdesc-inner{
+  background: var(--black);
+}
+.gslide-title{
+  color: var(--white) !important;
+}
+@media (min-width:769px) {
+  .glightbox-clean .gdesc-inner{
+    border-radius: 0 0 .5rem .5rem !important;
+  }
+}
+.glightbox-clean .gslide-description{background: transparent}
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -151,7 +258,7 @@ section#hero h1 {
   background: var(--blue);
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: .5rem;
   transition: all 0.4s;
 }
 .back-to-top i {
