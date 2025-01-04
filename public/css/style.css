@@ -342,6 +342,56 @@ section#hero h1 {
 
 
 /*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about .content{
+  text-align: left;
+}
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+.about .content ul li {
+  padding-left: 28px;
+  position: relative;
+}
+.about .content ul li+li {
+  margin-top: 10px;
+}
+.about .content ul i {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 20px;
+  color: var(--blue);
+  line-height: 1;
+}
+.about .content p:last-child {margin-bottom: 0}
+.about .content .btn-learn-more {
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: .5rem;
+  transition: 0.3s;
+  line-height: 1;
+  color: var(--blue);
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid var(--blue);
+}
+.about .content .btn-learn-more:hover {
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
 .services .service-card {
@@ -512,7 +562,6 @@ section#hero h1 {
   }
 }
 .glightbox-clean .gslide-description{background: transparent}
-
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -699,7 +748,7 @@ section#hero h1 {
   justify-content: center;
   align-items: center;
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--white);
   border-radius: 50px;
 }
 .footer .footer-content .social-links a:hover {
