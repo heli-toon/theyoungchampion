@@ -777,14 +777,13 @@ section#hero h1 {
   margin-bottom: 0;
 }
 .footer .footer-content .social-links a {
-  font-size: 14px;
+  font-size: 20px;
   line-height: 0;
   display: inline-block;
   width: 32px;
   height: 32px;
   color: rgba(27, 47, 69, 0.5);
   margin-right: 10px;
-  transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
