@@ -339,8 +339,50 @@ section#hero h1 {
   font-size: 12px;
   padding: 3px 6px;
 }
+/*--------------------------------------------------------------
+# Static Hero Section
+--------------------------------------------------------------*/
+.hero-static {
+  width: 100%;
+  min-height: 100vh;
+  background: url("../images/hero-bg.jpg") center center;
+  background-size: cover;
+  position: relative;
+  padding: 120px 0 60px;
+}
+.hero-static h2 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--blue);
+}
+.hero-static p {
+  margin: 0 0 30px 0;
+  font-size: 20px;
+  font-weight: 400;
+}
+.hero-static .btn-get-started {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: .5rem;
+  transition: var(--anim-mid);
+  color: var(--white);
+  background: var(--blue);
+}
+.hero-static .btn-get-started:hover {
+  background: var(--blue2);
+}
 
-
+@media (max-width: 640px) {
+  .hero-static h2 {font-size: 32px}
+  .hero-static p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .hero-static .btn-get-started{font-size: 14px}
+}
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
@@ -733,7 +775,6 @@ section#hero h1 {
 .footer .footer-content .footer-info p {
   font-size: 15px;
   margin-bottom: 0;
-  color: var(--color-secondary);
 }
 .footer .footer-content .social-links a {
   font-size: 14px;
@@ -790,7 +831,6 @@ section#hero h1 {
 }
 .footer .footer-content .footer-contact p {
   line-height: 26px;
-  color: var(--color-secondary);
 }
 .footer .footer-legal {
   background: var(--black);
@@ -798,13 +838,11 @@ section#hero h1 {
 }
 .footer .footer-legal .copyright {
   text-align: center;
-  color: var(--color-secondary);
 }
 .footer .footer-legal .credits {
   padding-top: 4px;
   text-align: center;
   font-size: 13px;
-  color: var(--color-secondary);
 }
 /*--------------------------------------------------------------
 # Back to top button
